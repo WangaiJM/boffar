@@ -1,0 +1,42 @@
+{% load static %}
+
+<header>
+  <div class="container">
+    <div class="logo">
+      <img src="{% static 'images/logo_clr.png' %}" alt="Boffar Logo" />
+    </div>
+    <nav class="main__nav">
+      <ul class="nav__list">
+        {% if not is_home %}
+        <li class="nav__list-item">
+          <a href="/">Home</a>
+        </li>
+        {% endif %}
+        <li class="nav__list-item">
+          {% if is_home %}
+          <a href="">About </a>
+          {% else %}
+          <a href="">About Us</a>
+          {% endif%}
+        </li>
+        <li class="nav__list-item">
+          <a href="">Rooms</a>
+        </li>
+        {% if not is_home %}
+        <li class="nav__list-item">
+          <a href="/">Our Team</a>
+        </li>
+        <li class="nav__list-item">
+          <a href="/">Gallery</a>
+        </li>
+        {% endif %}
+        <li class="nav__list-item">
+          <a href="">Contacts</a>
+        </li>
+      </ul>
+    </nav>
+    {% if not is_home% }
+    <a href="" class="btn btn__book">Book Now</a>
+    {% endif %}
+  </div>
+</header>

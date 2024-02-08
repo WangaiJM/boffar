@@ -1,0 +1,15 @@
+<!-- extending main -->
+{% extends 'app/main.html' %}
+
+<!-- load static -->
+{% load static %}
+
+<!-- title -->
+{% block title %} Welcome Home {% endblock %}
+
+<!-- header -->
+{% block header %} {% include 'app/header.html' %} {% endblock%}
+<!-- body -->
+{% block content %}
+<div>Hello there</div>
+{% endblock %}
