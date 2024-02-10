@@ -12,3 +12,23 @@ function openTab(evt, tabName) {
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+
+// Carousel
+document.addEventListener("DOMContentLoaded", function () {
+  var slides = document.querySelectorAll(".slide");
+  var currentSlide = 0;
+
+  function showSlide(index) {
+    for (var i = 0; i < slides.length; i++) {
+      slides[i].classList.remove("active");
+    }
+    slides[index].classList.add("active");
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  setInterval(nextSlide, 10000); // Change slide every 5 seconds
+});

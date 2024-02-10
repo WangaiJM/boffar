@@ -1,0 +1,64 @@
+<!-- extending main -->
+{% extends 'app/main.html' %}
+
+<!-- load static -->
+{% load static %}
+
+<!-- title -->
+{% block title %} Welcome Home {% endblock %}
+
+<!-- header -->
+{% block header %} {% include 'app/headerOther.html' %} {% endblock%}
+<!-- Banner -->
+{% block banner %} {% include 'app/banner.html' %} {% endblock%}
+<!-- body -->
+{% block content %}
+<main>
+  <section id="home-about">
+    <div class="container">
+      <div class="about-image">
+        <img src="{% static 'images/img1.jpg' %}" alt="Front view" />
+      </div>
+      <div class="about-description">
+        <h2 class="title">About Our Cabins</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit modi,
+          temporibus velit repellat blanditiis mollitia cupiditate harum eveniet
+          totam eaque reiciendis facilis! Qui earum inventore corporis ullam,
+          fugiat debitis rerum neque aliquid, sed impedit esse enim explicabo,
+          iste vel delectus.
+        </p>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae
+          ducimus debitis accusamus quod, odit quas doloribus repellendus amet
+          cupiditate libero!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="partners">
+    <div class="container">
+      <h2 class="title">Our Partners</h2>
+      <div class="team-cards">
+        <div class="team-card">
+          <span class="material-symbols-rounded"> groups </span>
+          <h2 class="team-title title">Qualified Team</h2>
+        </div>
+        <div class="team-card">
+          <span class="material-symbols-rounded"> local_dining </span>
+          <h2 class="team-title title">Restaurant</h2>
+        </div>
+        <div class="team-card">
+          <span class="material-symbols-rounded"> spa </span>
+          <h2 class="team-title title">SPA Salon</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% endblock %}
+
+<!-- footer -->
+{% block footer %} {% include 'app/footer.html' %} {% endblock%}

@@ -2,6 +2,7 @@
 
 <header class="main-header">
   <div class="video-container">
+    {% if is_home %}
     <video autoplay loop muted class="video-background">
       <source
         src="{% static 'images/boffar_background.mp4' %}"
@@ -9,6 +10,7 @@
       />
       Your browser does not support the video tag.
     </video>
+    {% endif %}
   </div>
   <div class="container">
     <div class="header-nav">
@@ -28,9 +30,9 @@
         {% endif %}
         <li class="nav__list-item">
           {% if is_home %}
-          <a href="">About </a>
+          <a href="{% url 'about' %}">About </a>
           {% else %}
-          <a href="">About Us</a>
+          <a href="{% url 'about' %}">About Us</a>
           {% endif%}
         </li>
         <li class="nav__list-item">

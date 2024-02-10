@@ -1,0 +1,39 @@
+{% load static %}
+
+<header class="other-header">
+  <div class="container">
+    <div class="header-nav">
+      <a href="/">
+        <img
+          src="{% static 'images/logo.jpg' %}"
+          alt="Boffar Logo"
+          class="logo"
+        />
+      </a>
+      <ul class="nav__list">
+        <li class="nav__list-item">
+          <a href="/">Home</a>
+        </li>
+        <li class="nav__list-item">
+          <a href="{% url 'about' %}">About Us</a>
+        </li>
+        <li class="nav__list-item">
+          <a href="">Rooms</a>
+        </li>
+        <li class="nav__list-item">
+          <a href="/">Our Team</a>
+        </li>
+        <li class="nav__list-item">
+          <a href="/">Gallery</a>
+        </li>
+        <li class="nav__list-item">
+          <a href="">Contacts</a>
+        </li>
+      </ul>
+      <a href="" class="btn btn__book">Book Now</a>
+    </div>
+
+    <!-- END NAV -->
+    <!-- Banner -->
+  </div>
+</header>
