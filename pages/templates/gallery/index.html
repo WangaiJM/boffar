@@ -1,0 +1,36 @@
+<!-- extending main -->
+{% extends 'app/main.html' %}
+
+<!-- load static -->
+{% load static %}
+
+<!-- title -->
+{% block title %} Welcome Home {% endblock %}
+
+<!-- header -->
+{% block header %} {% include 'app/headerOther.html' %} {% endblock%}
+<!-- Banner -->
+{% block banner %} {% include 'app/banner.html' %} {% endblock%}
+<!-- body -->
+{% block content %}
+<main>
+  <section id="gallery">
+    <div class="gallery-img">
+      <img src="{% static 'images/img1.jpg' %}" alt="Image 1" />
+    </div>
+    <div class="gallery-img">
+      <img src="{% static 'images/img2.jpg' %}" alt="Image 2" />
+    </div>
+    <div class="gallery-img">
+      <img src="{% static 'images/img3.jpg' %}" alt="Image 3" />
+    </div>
+    <div class="gallery-img">
+      <img src="{% static 'images/img4.jpg' %}" alt="Image 4" />
+    </div>
+  </section>
+</main>
+
+{% endblock %}
+
+<!-- footer -->
+{% block footer %} {% include 'app/footer.html' %} {% endblock%}

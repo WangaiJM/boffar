@@ -41,10 +41,11 @@ footer .socials {
   color: white;
   cursor: pointer;
 }
-footer .socials span {
+footer .socials i {
   padding: 1.2rem;
+  font-size: 2em;
 }
-footer .socials span:hover {
+footer .socials i:hover {
   color: wheat;
 }
 footer p {

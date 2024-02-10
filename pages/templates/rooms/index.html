@@ -1,0 +1,48 @@
+<!-- extending main -->
+{% extends 'app/main.html' %}
+
+<!-- load static -->
+{% load static %}
+
+<!-- title -->
+{% block title %} Welcome Home {% endblock %}
+
+<!-- header -->
+{% block header %} {% include 'app/headerOther.html' %} {% endblock%}
+<!-- Banner -->
+{% block banner %} {% include 'app/banner.html' %} {% endblock%}
+<!-- body -->
+{% block content %}
+<main>
+  <section id="features">
+    <div class="container">
+      <h2 class="title">Rooms & Suites</h2>
+      <h4 class="features-subtitle">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate,
+        libero
+      </h4>
+      <div class="feature-cards">
+        <div class="feature-card">
+          <img src="{% static 'images/img2.jpg' %}" alt="Suite" />
+          <h2 class="room-title">Suite</h2>
+          <p class="room-price">ksh. 6000 Per night</p>
+        </div>
+        <div class="feature-card">
+          <img src="{% static 'images/img3.jpg' %}" alt="Suite" />
+          <h2 class="room-title">Double Room</h2>
+          <p class="room-price">ksh. 4500 Per night</p>
+        </div>
+        <div class="feature-card">
+          <img src="{% static 'images/img4.jpg' %}" alt="Suite" />
+          <h2 class="room-title">Family</h2>
+          <p class="room-price">ksh. 2000 Per night</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% endblock %}
+
+<!-- footer -->
+{% block footer %} {% include 'app/footer.html' %} {% endblock%}

@@ -36,18 +36,18 @@
           {% endif%}
         </li>
         <li class="nav__list-item">
-          <a href="">Rooms</a>
+          <a href="{% url 'rooms' %}">Rooms</a>
         </li>
         {% if not is_home %}
         <li class="nav__list-item">
-          <a href="/">Our Team</a>
+          <a href="{% url 'team' %}">Our Team</a>
         </li>
         <li class="nav__list-item">
-          <a href="/">Gallery</a>
+          <a href="{% url 'gallery' %}">Gallery</a>
         </li>
         {% endif %}
         <li class="nav__list-item">
-          <a href="">Contacts</a>
+          <a href="{% url 'contacts' %}">Contacts</a>
         </li>
       </ul>
 
