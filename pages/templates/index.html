@@ -11,5 +11,219 @@
 {% block header %} {% include 'app/header.html' %} {% endblock%}
 <!-- body -->
 {% block content %}
-<div>Hello there</div>
+<main>
+  <section id="home-about">
+    <div class="container">
+      <div class="about-image">
+        <img src="{% static 'images/img1.jpg' %}" alt="Front view" />
+      </div>
+      <div class="about-description">
+        <h2 class="title">Welcome to Boffar Cabins</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit modi,
+          temporibus velit repellat blanditiis mollitia cupiditate harum eveniet
+          totam eaque reiciendis facilis! Qui earum inventore corporis ullam,
+          fugiat debitis rerum neque aliquid, sed impedit esse enim explicabo,
+          iste vel delectus.
+        </p>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae
+          ducimus debitis accusamus quod, odit quas doloribus repellendus amet
+          cupiditate libero!
+        </p>
+      </div>
+    </div>
+  </section>
+  <section id="features">
+    <div class="container">
+      <h2 class="title">Rooms & Suites</h2>
+      <h4 class="features-subtitle">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate,
+        libero
+      </h4>
+      <div class="feature-cards">
+        <div class="feature-card">
+          <img src="{% static 'images/img2.jpg' %}" alt="Suite" />
+          <h2 class="room-title">Suite</h2>
+          <p class="room-price">ksh. 6000 Per night</p>
+        </div>
+        <div class="feature-card">
+          <img src="{% static 'images/img3.jpg' %}" alt="Suite" />
+          <h2 class="room-title">Double Room</h2>
+          <p class="room-price">ksh. 4500 Per night</p>
+        </div>
+        <div class="feature-card">
+          <img src="{% static 'images/img4.jpg' %}" alt="Suite" />
+          <h2 class="room-title">Family</h2>
+          <p class="room-price">ksh. 2000 Per night</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="restaurant">
+    <div class="container">
+      <h2 class="title">Our Restaurant menu</h2>
+
+      <div class="tab">
+        <button class="tablinks active" onclick="openTab(event, 'Tab1')">
+          MAINS
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'Tab2')">
+          DESSERTS
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'Tab3')">
+          DRINKS
+        </button>
+      </div>
+
+      <div id="Tab1" class="tabcontent" style="display: block">
+        <div class="menu-item">
+          <h3 class="price">KSh. 2500</h3>
+          <h2 class="menu-title">Tropical heat potato crisps</h2>
+          <p class="menu-description">
+            Lorem ipsum dolor sit amet consectetur.
+          </p>
+        </div>
+        <div class="menu-item">
+          <h3 class="price">KSh. 2500</h3>
+          <h2 class="menu-title">Tropical heat potato crisps</h2>
+          <p class="menu-description">
+            Lorem ipsum dolor sit amet consectetur.
+          </p>
+        </div>
+        <div class="menu-item">
+          <h3 class="price">KSh. 2500</h3>
+          <h2 class="menu-title">Tropical heat potato crisps</h2>
+          <p class="menu-description">
+            Lorem ipsum dolor sit amet consectetur.
+          </p>
+        </div>
+        <div class="menu-item">
+          <h3 class="price">KSh. 2500</h3>
+          <h2 class="menu-title">Tropical heat potato crisps</h2>
+          <p class="menu-description">
+            Lorem ipsum dolor sit amet consectetur.
+          </p>
+        </div>
+      </div>
+
+      <div id="Tab2" class="tabcontent">
+        <div class="menu-item">
+          <h3 class="price">KSh. 2500</h3>
+          <h2 class="menu-title">Tropical heat potato crisps</h2>
+          <p class="menu-description">
+            Lorem ipsum dolor sit amet consectetur.
+          </p>
+        </div>
+        <div class="menu-item">
+          <h3 class="price">KSh. 2500</h3>
+          <h2 class="menu-title">Tropical heat potato crisps</h2>
+          <p class="menu-description">
+            Lorem ipsum dolor sit amet consectetur.
+          </p>
+        </div>
+        <div class="menu-item">
+          <h3 class="price">KSh. 2500</h3>
+          <h2 class="menu-title">Tropical heat potato crisps</h2>
+          <p class="menu-description">
+            Lorem ipsum dolor sit amet consectetur.
+          </p>
+        </div>
+        <div class="menu-item">
+          <h3 class="price">KSh. 2500</h3>
+          <h2 class="menu-title">Tropical heat potato crisps</h2>
+          <p class="menu-description">
+            Lorem ipsum dolor sit amet consectetur.
+          </p>
+        </div>
+        <div class="menu-item">
+          <h3 class="price">KSh. 2500</h3>
+          <h2 class="menu-title">Tropical heat potato crisps</h2>
+          <p class="menu-description">
+            Lorem ipsum dolor sit amet consectetur.
+          </p>
+        </div>
+      </div>
+
+      <div id="Tab3" class="tabcontent">
+        <div class="menu-item">
+          <h3 class="price">KSh. 2500</h3>
+          <h2 class="menu-title">Tropical heat potato crisps</h2>
+          <p class="menu-description">
+            Lorem ipsum dolor sit amet consectetur.
+          </p>
+        </div>
+        <div class="menu-item">
+          <h3 class="price">KSh. 2500</h3>
+          <h2 class="menu-title">Tropical heat potato crisps</h2>
+          <p class="menu-description">
+            Lorem ipsum dolor sit amet consectetur.
+          </p>
+        </div>
+        <div class="menu-item">
+          <h3 class="price">KSh. 2500</h3>
+          <h2 class="menu-title">Tropical heat potato crisps</h2>
+          <p class="menu-description">
+            Lorem ipsum dolor sit amet consectetur.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="gallery-img">
+      <img src="{% static 'images/img1.jpg' %}" alt="Image 1" />
+    </div>
+    <div class="gallery-img">
+      <img src="{% static 'images/img2.jpg' %}" alt="Image 2" />
+    </div>
+    <div class="gallery-img">
+      <img src="{% static 'images/img3.jpg' %}" alt="Image 3" />
+    </div>
+    <div class="gallery-img">
+      <img src="{% static 'images/img4.jpg' %}" alt="Image 4" />
+    </div>
+  </section>
+
+  <section id="team">
+    <div class="container">
+      <div class="team-cards">
+        <div class="team-card">
+          <span class="material-symbols-rounded"> groups </span>
+          <h2 class="team-title title">Qualified Team</h2>
+          <p>
+            We employ the best people in the hospitality industry that are
+            highly qualified and treat our guests kindly.
+          </p>
+        </div>
+        <div class="team-card">
+          <span class="material-symbols-rounded"> local_dining </span>
+          <h2 class="team-title title">Restaurant</h2>
+          <p>
+            Feel free to visit our restaurant to enjoy the best dishes and
+            appetizers as well as exclusive dishes from our chef.
+          </p>
+        </div>
+        <div class="team-card">
+          <span class="material-symbols-rounded"> spa </span>
+          <h2 class="team-title title">SPA Salon</h2>
+          <p>
+            Indulge yourself with the best relaxation available at our hotel’s
+            SPA salon. Trust us, you won’t regret!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="cta">
+    <div class="container">
+      <h2 class="title">Providing High-quality Accommodation</h2>
+      <a href="#!" class="btn btn-primary">Book Now</a>
+    </div>
+  </section>
+</main>
 {% endblock %}
+
+<!-- footer -->
+{% block footer %} {% include 'app/footer.html' %} {% endblock%}

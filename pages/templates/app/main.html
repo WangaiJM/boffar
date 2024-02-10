@@ -6,6 +6,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Boffar Cabins | {% block title %} Welcome {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{% static 'images/logo_clr.png' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0"
+    />
   </head>
   <body>
     <!-- header -->
@@ -14,5 +24,6 @@
     {% block content %} {% endblock %}
     <!-- footer -->
     {% block footer %} {% endblock %}
+    <script src="{% static 'js/index.js' %}"></script>
   </body>
 </html>

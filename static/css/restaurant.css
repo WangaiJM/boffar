@@ -1,0 +1,19 @@
+#restaurant {
+  padding: 20rem;
+  background-color: #ecebeb;
+}
+#restaurant .title {
+  text-align: center;
+  margin: 2rem 0;
+}
+.menu-item {
+  padding: 1rem;
+}
+.price {
+  margin-bottom: 0.5rem;
+  color: rgb(179, 123, 50);
+}
+.menu-title {
+  font-size: 2.4rem;
+  margin-bottom: 0.8rem;
+}
