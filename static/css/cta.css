@@ -8,5 +8,5 @@
 #cta .title {
   margin-bottom: 2rem;
   font-size: 4rem;
-  color: rgb(197, 28, 160);
+  color: var(--color-black);
 }

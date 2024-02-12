@@ -3,7 +3,7 @@
   min-height: 90dvh;
 }
 .other-header {
-  background-color: #413e3e;
+  background-color: var(--color-gray-600);
 }
 .video-container {
   position: absolute;
@@ -38,7 +38,11 @@
 }
 .nav__list-item a {
   text-transform: uppercase;
-  color: var(--txt-link);
+  color: var(--color-white);
+}
+.nav__list-item a:hover {
+  font-weight: 700;
+  color: var(--color-wheat);
 }
 
 .hero {
@@ -49,42 +53,28 @@
   flex-direction: column;
 }
 .hero_title {
-  color: white;
+  color: var(--color-white);
   margin-top: 5rem;
   text-transform: capitalize;
-  font-weight: 700;
+  font-weight: 900;
   letter-spacing: 0.6rem;
   font-size: 3.6rem;
 }
 .hero_p {
-  color: white;
+  color: var(--color-white);
   padding: 5rem 0;
   text-align: center;
   width: 60%;
   font-size: 2rem;
 }
 .stars {
-  color: white;
+  color: var(--color-white);
   margin-top: 2rem;
 }
-/* .banner {
-  background-image: url("./../images/img5.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 65dvh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: wheat;
-  text-transform: capitalize;
-  font-size: 1.6em;
-  letter-spacing: 0.1em;
-} */
 .banner {
-  position: relative; /* added to create stacking context */
-  height: 65vh; /* changed vh to vh for consistency */
-  color: wheat;
+  position: relative;
+  height: 65vh;
+  color: var(--color-wheat);
   text-transform: capitalize;
   font-size: 1.6em;
   letter-spacing: 0.1em;
@@ -116,8 +106,8 @@
 
 .banner-title {
   position: absolute;
-  bottom: 20px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   z-index: 1;
 }

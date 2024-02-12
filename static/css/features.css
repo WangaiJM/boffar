@@ -13,3 +13,22 @@
   align-items: center;
   text-align: center;
 }
+
+.features-subtitle {
+  width: 70%;
+  margin: 2em auto;
+  font-weight: 400;
+}
+.room-price {
+  text-transform: uppercase;
+  color: var(--color-orange);
+  font-weight: 500;
+}
+/* Partnesr */
+
+#partners .title {
+  text-align: center;
+  margin: 2em 0;
+  font-size: 2em;
+  font-weight: 700;
+}
