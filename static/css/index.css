@@ -1,4 +1,5 @@
 @import url("reset.css");
+@import url("general.css");
 @import url("header.css");
 @import url("about.css");
 @import url("tab.css");
@@ -7,4 +8,5 @@
 @import url("gallery.css");
 @import url("team.css");
 @import url("cta.css");
+@import url("contacts.css");
 @import url("footer.css");

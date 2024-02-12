@@ -19,3 +19,7 @@
   height: 100%;
   object-fit: cover;
 }
+.main-gallery {
+  gap: 2rem;
+  margin: 3rem;
+}
