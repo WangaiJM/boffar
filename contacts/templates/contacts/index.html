@@ -33,43 +33,38 @@
       <h2 class="title">Contact Us</h2>
       <div class="contact-holder">
         <div class="contact-form">
-          <form action="">
+          <form method="POST">
+            {% csrf_token %}
             <div class="form-group">
               <div class="form-control">
-                <label for="firstname">Firstname</label>
-                <input type="text" id="firstname" />
+                <label>{{ form.firstname.label}}</label>
+                {{form.firstname}}
               </div>
               <div class="form-control">
-                <label for="lastname">Lastname</label>
-                <input type="text" id="lastname" />
+                <label>{{form.lastname.label}}</label>
+                {{form.lastname}}
               </div>
             </div>
             <div class="form-group">
               <div class="form-control">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" />
+                <label>{{form.email.label}}</label>
+                {{form.email}}
               </div>
               <div class="form-control">
-                <label for="contact">Contact</label>
-                <input type="text" name="contact" id="contact" />
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="form-control">
-                <label for="subject">Subject</label>
-                <input type="text" name="subject" id="subject" />
+                <label>{{form.contact.label}}</label>
+                {{form.contact}}
               </div>
             </div>
             <div class="form-group">
               <div class="form-control">
-                <label for="message">Message</label>
-                <textarea
-                  name="message"
-                  id="message"
-                  cols="50"
-                  rows="10"
-                  class="contact-textarea"
-                ></textarea>
+                <label>{{form.subject.label}}</label>
+                {{form.subject}}
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-control">
+                <label>Message</label>
+                {{form.body}}
               </div>
             </div>
             <div class="form-group">

@@ -41,7 +41,8 @@ INSTALLED_APPS = [
 
     'pages',
     'contacts',
-    'menu'
+    'menu',
+    'reservation',
 ]
 
 MIDDLEWARE = [
@@ -110,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Nairobi'
 
 USE_I18N = True
 
@@ -131,3 +132,10 @@ STATICFILES_DIRS = [(os.path.join(BASE_DIR, 'static'))]
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_HOST = 'mail.boffarcabins.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'info@boffarcabins.com'
+EMAIL_HOST_PASSWORD = 'Boffar2024.'
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False

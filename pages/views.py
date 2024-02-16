@@ -15,7 +15,5 @@ def teamView(request):
 def galleryView(request):
     return render(request, 'gallery/index.html', { 'title': 'Gallery'})
 
-def contactsView(request):
-    return render(request, 'contacts/index.html', { 'title': 'Contact Us'})
 
 
