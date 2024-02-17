@@ -51,9 +51,7 @@
         </li>
       </ul>
 
-      {% if not is_home %}
-      <a href="" class="btn btn__book">Book Now</a>
-      {% endif %}
+      <a href="{% url 'bookings' %}" class="btn btn__book">Book Now</a>
     </div>
 
     <!-- END NAV -->

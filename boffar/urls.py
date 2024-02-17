@@ -9,4 +9,5 @@ urlpatterns = [
     path('', include('pages.urls')),
     path('', include('contacts.urls')),
     path('', include('menu.urls')),
+    path('', include('reservation.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -29,13 +29,21 @@
           </tr>
         </thead>
         <tbody>
-          {% for menu in menus %} {% if menu.category == 'Mains' %}
+          {% for menu in menus %}
+          <!-- mains -->
+          {% if menu.category == 'Mains' %}
+          <!-- is active -->
+          {% if menu.is_active%}
           <tr>
             <td>{{menu.title}}</td>
             <td>{{menu.description}}</td>
             <td>Ksh. {{menu.price}}</td>
           </tr>
-          {% endif %} {% endfor %}
+          {% endif %}
+          <!-- end is active -->
+          {% endif %}
+          <!-- end mains -->
+          {% endfor %}
         </tbody>
       </table>
     </div>
@@ -52,13 +60,21 @@
           </tr>
         </thead>
         <tbody>
-          {% for menu in menus %} {% if menu.category == 'Desserts' %}
+          {% for menu in menus %}
+          <!-- Desserts -->
+          {% if menu.category == 'Desserts' %}
+          <!-- is active -->
+          {% if menu.is_active%}
           <tr>
             <td>{{menu.title}}</td>
             <td>{{menu.description}}</td>
             <td>Ksh. {{menu.price}}</td>
           </tr>
-          {% endif %} {% endfor %}
+          {% endif %}
+          <!-- end is active -->
+          {% endif %}
+          <!-- end mains -->
+          {% endfor %}
         </tbody>
       </table>
     </div>
@@ -75,16 +91,27 @@
           </tr>
         </thead>
         <tbody>
-          {% for menu in menus %} {% if menu.category == 'Drinks' %}
+          {% for menu in menus %}
+          <!-- Drinks -->
+          {% if menu.category == 'Drinks' %}
+          <!-- is active -->
+          {% if menu.is_active%}
           <tr>
             <td>{{menu.title}}</td>
             <td>{{menu.description}}</td>
             <td>Ksh. {{menu.price}}</td>
           </tr>
-          {% endif %} {% endfor %}
+          {% endif %}
+          <!-- end is active -->
+          {% endif %}
+          <!-- end mains -->
+          {% endfor %}
         </tbody>
       </table>
     </div>
   </div>
 </section>
 {% endblock %}
+
+<!-- footer -->
+{% block footer %} {% include 'app/footer.html' %} {% endblock%}

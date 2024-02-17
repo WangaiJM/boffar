@@ -1,0 +1,7 @@
+.booking-form {
+  background-color: var(--color-gray-500);
+  padding: 3rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--box-shadow-lg);
+  border-radius: 2rem;
+}

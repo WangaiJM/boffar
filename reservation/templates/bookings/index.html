@@ -1,0 +1,89 @@
+<!-- extending main -->
+{% extends 'app/main.html' %}
+
+<!-- load static -->
+{% load static %}
+
+<!-- title -->
+{% block title %} Contact Us {% endblock %}
+
+<!-- header -->
+{% block header %} {% include 'app/headerOther.html' %} {% endblock%}
+
+<!-- body -->
+{% block content %}
+<main>
+  <div class="contacts">
+    <div class="container">
+      <h2 class="title">Book Us</h2>
+      <div class="contact-holder">
+        <div class="contact-form">
+          <form method="POST" class="booking-form">
+            {% csrf_token %}
+            <div class="form-group">
+              <div class="form-control">
+                <label>{{ form.firstname.label}}</label>
+                {{form.firstname}}
+              </div>
+              <div class="form-control">
+                <label>{{form.lastname.label}}</label>
+                {{form.lastname}}
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-control">
+                <label>{{form.email.label}}</label>
+                {{form.email}}
+              </div>
+              <div class="form-control">
+                <label>{{form.contact.label}}</label>
+                {{form.contact}}
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-control">
+                <label>{{ form.check_in_date.label }}</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  name="check_in_date"
+                  id="check_in_date"
+                  value="{{ form.check_in_date.value }}"
+                />
+              </div>
+              <div class="form-control">
+                <label>{{ form.check_out_date.label }}</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  name="check_out_date"
+                  id="check_out_date"
+                  value="{{ form.check_out_date.value }}"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="form-control">
+                <input type="submit" value="Book Now" class="btn btn-primary" />
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="contact-info">
+          <h2 class="sub-title">Book Via Call or Email</h2>
+          <ul>
+            <li><span>Phone: </span>+254 113 935 166</li>
+            <li><span>Phone: </span>+254 712 488 046</li>
+            <li><span>Email: </span>reservation@boffarcabins.com</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+<!-- footer -->
+{% block footer %} {% include 'app/footer.html' %} {% endblock%}
