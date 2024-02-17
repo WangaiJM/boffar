@@ -1,0 +1,90 @@
+<!-- extending main -->
+{% extends 'app/main.html' %}
+
+<!-- load static -->
+{% load static %}
+
+<!-- title -->
+{% block title %} Our Menu{% endblock %}
+
+<!-- header -->
+{% block header %} {% include 'app/headerOther.html' %} {% endblock%}
+
+<!-- Content -->
+
+{% block content %}
+<section id="restaurant" class="main-restaurant">
+  <div class="container">
+    <h2 class="title">Our Restaurant menu</h2>
+
+    <!-- First Section: Mains -->
+    <h3>Mains</h3>
+    <div class="menu-table-wrapper">
+      <table class="menu-table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for menu in menus %} {% if menu.category == 'Mains' %}
+          <tr>
+            <td>{{menu.title}}</td>
+            <td>{{menu.description}}</td>
+            <td>Ksh. {{menu.price}}</td>
+          </tr>
+          {% endif %} {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Second Section: Desserts -->
+    <h3>Desserts</h3>
+    <div class="menu-table-wrapper">
+      <table class="menu-table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for menu in menus %} {% if menu.category == 'Desserts' %}
+          <tr>
+            <td>{{menu.title}}</td>
+            <td>{{menu.description}}</td>
+            <td>Ksh. {{menu.price}}</td>
+          </tr>
+          {% endif %} {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Third Section: Drinks -->
+    <h3>Drinks</h3>
+    <div class="menu-table-wrapper">
+      <table class="menu-table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for menu in menus %} {% if menu.category == 'Drinks' %}
+          <tr>
+            <td>{{menu.title}}</td>
+            <td>{{menu.description}}</td>
+            <td>Ksh. {{menu.price}}</td>
+          </tr>
+          {% endif %} {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+{% endblock %}

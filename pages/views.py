@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import gallery
 
 def index(request):
     return render(request, 'index.html', {'is_home': True})
@@ -12,8 +13,13 @@ def roomsView(request):
 def teamView(request):
     return render(request, 'team/index.html', { 'title': 'team'})
 
+
 def galleryView(request):
-    return render(request, 'gallery/index.html', { 'title': 'Gallery'})
+    galleries = gallery.objects.all().order_by('-uploaded_at')
+    context = {'galleries': galleries, 'title': 'Gallery'}
+    return render(request, 'gallery/index.html', context)
+
+
 
 
 

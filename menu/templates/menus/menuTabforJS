@@ -1,0 +1,67 @@
+<!-- extending main -->
+{% extends 'app/main.html' %}
+
+<!-- load static -->
+{% load static %}
+
+<!-- title -->
+{% block title %} Our Team {% endblock %}
+
+<!-- header -->
+{% block header %} {% include 'app/headerOther.html' %} {% endblock%}
+
+<!-- Content -->
+
+{% block content %}
+<section id="restaurant">
+  <div class="container">
+    <h2 class="title">Our Restaurant menu</h2>
+
+    <div class="tab">
+      <button class="tablinks active" onclick="openTab(event, 'Tab1')">
+        MAINS
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'Tab2')">
+        DESSERTS
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'Tab3')">DRINKS</button>
+    </div>
+    {% for menuItem in menu %}
+
+    <!-- check active items on menu -->
+    {% if menuItem.is_active %}
+    <div id="Tab1" class="tabcontent">
+      {% if menuItem.category == 'Mains' %}
+      <div class="menu-item">
+        <h2 class="menu-title">{{ menuItem.title }}</h2>
+        <p class="menu-description">{{ menuItem.description }}</p>
+        <h3 class="price">{{ menuItem.price }}</h3>
+      </div>
+      {% endif%}
+    </div>
+
+    <div id="Tab2" class="tabcontent">
+      {% if menuItem.category == 'Desserts' %}
+      <div class="menu-item">
+        <h2 class="menu-title">{{ menuItem.title }}</h2>
+        <p class="menu-description">{{ menuItem.description }}</p>
+        <h3 class="price">{{ menuItem.price }}</h3>
+      </div>
+      {% endif%}
+    </div>
+
+    <div id="Tab3" class="tabcontent">
+      {% if menuItem.category == 'Drinks' %}
+      <div class="menu-item">
+        <h2 class="menu-title">{{ menuItem.title }}</h2>
+        <p class="menu-description">{{ menuItem.description }}</p>
+        <h3 class="price">{{ menuItem.price }}</h3>
+      </div>
+      {% endif%}
+    </div>
+    {% endif %}
+    <!--end check  -->
+    {% endfor%}
+  </div>
+</section>
+{% endblock %}

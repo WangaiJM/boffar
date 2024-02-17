@@ -15,32 +15,13 @@
 {% block content %}
 <main>
   <section id="gallery" class="main-gallery">
+    {% for gallery in galleries %}
     <div class="gallery-img">
-      <a href="{% static 'images/img1.jpg' %}"
-        ><img src="{% static 'images/img1.jpg' %}" alt="Image 1"
+      <a href="{{ gallery.image.url }}"
+        ><img src="{{ gallery.image.url }}" alt="{{gallery.id}}"
       /></a>
     </div>
-    <div class="gallery-img">
-      <img src="{% static 'images/img2.jpg' %}" alt="Image 2" />
-    </div>
-    <div class="gallery-img">
-      <img src="{% static 'images/img3.jpg' %}" alt="Image 3" />
-    </div>
-    <div class="gallery-img">
-      <img src="{% static 'images/img4.jpg' %}" alt="Image 4" />
-    </div>
-    <div class="gallery-img">
-      <img src="{% static 'images/img1.jpg' %}" alt="Image 1" />
-    </div>
-    <div class="gallery-img">
-      <img src="{% static 'images/img2.jpg' %}" alt="Image 2" />
-    </div>
-    <div class="gallery-img">
-      <img src="{% static 'images/img3.jpg' %}" alt="Image 3" />
-    </div>
-    <div class="gallery-img">
-      <img src="{% static 'images/img4.jpg' %}" alt="Image 4" />
-    </div>
+    {% endfor %}
   </section>
 </main>
 
