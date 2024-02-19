@@ -27,7 +27,7 @@ def bookingView(request):
                 Check Out: {check_out_date}
             """
 
-            html = render_to_string('contacts/content.html', {
+            html = render_to_string('bookings/content.html', {
                 'firstname': firstname,
                 'lastname': lastname,
                 'email': email,
@@ -41,7 +41,7 @@ def bookingView(request):
                           ["info@boffarcabins.com"], html_message=html)
             except BadHeaderError:
                 return HttpResponse("Invalid header found.")
-            return render(request, "contacts/success.html")
+            return render(request, "bookings/success.html")
 
     else:
         form = bookingForm()
