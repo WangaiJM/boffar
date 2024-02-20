@@ -23,3 +23,14 @@
   gap: 2rem;
   margin: 3rem;
 }
+@media (max-width: 600px) {
+  #gallery {
+    width: 97.5%;
+    margin: 0 auto;
+  }
+  .main-gallery {
+    gap: 1rem;
+    margin: 0;
+    width: 100% !important;
+  }
+}

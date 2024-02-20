@@ -1,3 +1,11 @@
+// hambuger
+var hamburger = document.querySelector(".hamburger > span");
+var navList = document.querySelector(".nav__list");
+
+hamburger.addEventListener("click", () => {
+  navList.classList.toggle("active");
+});
+
 // Tab Content
 function openTab(evt, tabName) {
   var i, tabcontent, tablinks;

@@ -51,3 +51,47 @@ footer .socials i:hover {
 footer p {
   color: wheat;
 }
+@media (max-width: 600px) {
+  footer {
+    padding: 2.5rem;
+  }
+
+  .footer-image {
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 2rem;
+  }
+  footer .links a {
+    padding: 1rem;
+    position: relative;
+    display: block;
+    text-align: center;
+  }
+  footer .links a::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 50%;
+    background-color: wheat;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  footer .links a:hover::after {
+    width: 100%;
+    opacity: 0.25;
+  }
+  footer .socials {
+    margin: 2rem 0;
+  }
+  footer .socials i {
+    padding: 1rem;
+    font-size: 1.5em;
+  }
+  footer p {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+  }
+}

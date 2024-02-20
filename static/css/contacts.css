@@ -64,3 +64,45 @@ textarea {
   padding: 0.5em 0;
   font-weight: 700;
 }
+
+@media (max-width: 600px) {
+  .contacts .title {
+    padding: 1.5em 0;
+  }
+  .contact-holder {
+    grid-template-columns: 1fr;
+  }
+  .form-group {
+    display: block;
+  }
+
+  .form-control input,
+  textarea {
+    width: 100%;
+  }
+  .contact-textarea {
+    width: 95%;
+    margin-bottom: 2em;
+  }
+  .form-control input[type="submit"] {
+    width: 50%;
+
+    align-self: center;
+    margin-right: 0;
+  }
+  .form-control input[type="submit"]:hover {
+    transform: scale(1.1);
+    font-weight: 700;
+  }
+  .form-control input[type="submit"]:active {
+    scale: 1.05;
+  }
+
+  .contact-info ul {
+    padding: 1em 0;
+  }
+  .contact-info ul li {
+    padding: 0.5em 0;
+    font-weight: 700;
+  }
+}

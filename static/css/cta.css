@@ -10,3 +10,9 @@
   font-size: 4rem;
   color: var(--color-black);
 }
+@media (max-width: 600px) {
+  #cta .title {
+    color: var(--color-white);
+    font-size: 2rem;
+  }
+}

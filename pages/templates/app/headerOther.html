@@ -2,7 +2,7 @@
 
 <header class="other-header">
   <div class="container">
-    <div class="header-nav">
+    <div class="header-nav" id="other-header-nav">
       <a href="/">
         <img
           src="{% static 'images/logo.jpg' %}"
@@ -10,7 +10,7 @@
           class="logo"
         />
       </a>
-      <ul class="nav__list">
+      <ul class="nav__list" id="other-nav__list">
         <li class="nav__list-item">
           <a href="/">Home</a>
         </li>
@@ -30,7 +30,11 @@
           <a href="{% url 'contacts' %}">Contacts</a>
         </li>
       </ul>
-      <a href="{% url 'bookings' %}" class="btn btn__book">Book Now</a>
+      <a href="{% url 'bookings' %}" class="btn btn__book btn-nav">Book Now</a>
+
+      <div class="hamburger">
+        <span class="material-symbols-rounded" id="hamburger-btn"> menu </span>
+      </div>
     </div>
 
     <!-- END NAV -->
