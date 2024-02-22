@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700;900&display=swap");
+
+:root {
+  /* Primary Colors */
+  --color-wheat: #f5deb3;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Grays */
+  --color-gray-100: #f8f9fa;
+  --color-gray-200: #e9ecef;
+  --color-gray-300: #dee2e6;
+  --color-gray-400: #ced4da;
+  --color-gray-500: #adb5bd;
+  --color-gray-600: #6c757d;
+  --color-gray-700: #495057;
+  --color-gray-800: #343a40;
+  --color-gray-900: #212529;
+
+  /* Additional Colors */
+  --color-red: #ff0000;
+  --color-blue: #0000ff;
+  --color-green: #008000;
+  --color-yellow: #ffff00;
+  --color-orange: #ffa500;
+  --color-purple: #800080;
+  --color-pink: #ff69b4;
+  --color-cyan: #00ffff;
+  --color-magenta: #ff00ff;
+
+  /* Text Colors */
+  --color-text-primary: var(--color-black);
+  --color-text-secondary: var(--color-gray-600);
+  --color-text-muted: var(--color-gray-500);
+  --color-text-accent: var(--color-blue);
+
+  /* Button Colors */
+  --color-button-primary-bg: var(--color-green);
+  --color-button-primary-text: var(--color-white);
+  --color-button-secondary-bg: var(--color-gray-300);
+  --color-button-secondary-text: var(--color-gray-800);
+  --color-button-danger-bg: var(--color-red);
+  --color-button-danger-text: var(--color-white);
+  --color-button-success-bg: var(--color-green);
+  --color-button-success-text: var(--color-white);
+
+  /* Box Shadows */
+  --box-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+  --box-shadow-md: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+  --box-shadow-lg: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+  --box-shadow-xl: 0 12px 24px 0 rgba(0, 0, 0, 0.1);
+  --box-shadow-2xl: 0 24px 48px 0 rgba(0, 0, 0, 0.1);
+}
+/* Apply box-sizing to all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Set default margin and padding to zero for all elements */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set default font size for HTML */
+html {
+  font-size: 62.5%; /* 1rem = 10px, 1.5rem = 15px */
+}
+
+/* Set default font family and font size for body */
+body {
+  font-family: "Playfair Display", serif; /* Change fallback font if necessary */
+  font-size: 1.6rem; /* 16px */
+  line-height: 1.6; /* Match font size for easier line-height management */
+}
+
+/* Set default line height for paragraphs */
+p {
+  line-height: 1.5; /* Match line-height with body font size */
+}
+
+/* Remove default underline from anchor links */
+a {
+  text-decoration: none;
+  color: var(--color-wheat);
+}
+
+/* Make images and svgs responsive */
+img,
+svg {
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+}
+
+/* Remove default list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set maximum width for container and center it horizontally */
+.container {
+  width: 90%; /* Responsive width */
+  margin: 0 auto; /* Center container horizontally */
+  max-width: 1100px; /* Limit maximum width */
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

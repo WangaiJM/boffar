@@ -1,17 +1,6 @@
 {% load static %}
 
 <header class="main-header">
-  <div class="video-container">
-    {% if is_home %}
-    <video autoplay loop muted class="video-background">
-      <source
-        src="{% static 'images/boffar_background.mp4' %}"
-        type="video/mp4"
-      />
-      Your browser does not support the video tag.
-    </video>
-    {% endif %}
-  </div>
   <div class="container">
     <div class="header-nav">
       <a href="/">
@@ -23,29 +12,15 @@
       </a>
 
       <ul class="nav__list">
-        {% if not is_home %}
         <li class="nav__list-item">
           <a href="/">Home</a>
         </li>
-        {% endif %}
         <li class="nav__list-item">
-          {% if is_home %}
-          <a href="{% url 'about' %}">About </a>
-          {% else %}
           <a href="{% url 'about' %}">About Us</a>
-          {% endif%}
         </li>
         <li class="nav__list-item">
           <a href="{% url 'rooms' %}">Rooms</a>
         </li>
-        {% if not is_home %}
-        <li class="nav__list-item">
-          <a href="{% url 'team' %}">Our Team</a>
-        </li>
-        <li class="nav__list-item">
-          <a href="{% url 'gallery' %}">Gallery</a>
-        </li>
-        {% endif %}
         <li class="nav__list-item">
           <a href="{% url 'contacts' %}">Contacts</a>
         </li>
@@ -57,7 +32,6 @@
     <!-- END NAV -->
     <!-- HERO -->
     <div class="hero">
-      {% if is_home %}
       <h1 class="hero_title">Best Place to Stay</h1>
       <div class="stars">
         <span class="material-symbols-rounded"> star </span>
@@ -66,15 +40,32 @@
         <span class="material-symbols-rounded"> star </span>
         <span class="material-symbols-rounded"> star </span>
       </div>
-      <p class="hero_p">
-        Experience the ultimate getaway at Boffar Cabins and Campsite – where
-        luxury meets nature! Indulge in top-tier accommodations, impeccable
-        services, and unmatched amenities. Your perfect escape awaits!
-      </p>
+      <p class="hero-ad">SERENITY, NATURAL, ADVENTURE</p>
       <a href="{% url 'bookings' %}" class="btn btn__book btn-header"
         >Book Now</a
       >
-      {% endif %}
+      <div class="activities">
+        <a href="{% url 'rooms' %}">
+          <i class="fa-solid fa-bed"></i>
+          Accomodation
+        </a>
+        <a href="#!">
+          <i class="fa-solid fa-campground"></i>
+          Campsite
+        </a>
+        <a href="#!">
+          <i class="fa-solid fa-ring"></i>
+          Wedding
+        </a>
+        <a href="#!">
+          <i class="fa-solid fa-person-hiking"></i>
+          Activities
+        </a>
+        <a href="#!">
+          <i class="fa-solid fa-people-group"></i>
+          Conference
+        </a>
+      </div>
     </div>
   </div>
 </header>

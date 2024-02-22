@@ -1,0 +1,18 @@
+#cta {
+  padding: 15em 0;
+  background-image: url(./../images/yard-3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+#cta .title {
+  margin-bottom: 2rem;
+  font-size: 4rem;
+  color: var(--color-white);
+}
+@media (max-width: 600px) {
+  #cta .title {
+    color: var(--color-white);
+    font-size: 2rem;
+  }
+}

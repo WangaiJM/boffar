@@ -1,0 +1,36 @@
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.gallery-img {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main-gallery {
+  gap: 2rem;
+  margin: 3rem;
+}
+@media (max-width: 600px) {
+  #gallery {
+    width: 97.5%;
+    margin: 0 auto;
+  }
+  .main-gallery {
+    gap: 1rem;
+    margin: 0;
+    width: 100% !important;
+  }
+}

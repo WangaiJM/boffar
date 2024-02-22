@@ -12,6 +12,18 @@
 <!-- body -->
 {% block content %}
 <main>
+  <section id="home-ad">
+    <div class="container">
+      <h1 class="ad-title">Come stay with us</h1>
+      <p>
+        Experience the ultimate getaway at Boffar Cabins and Campsite – where
+        luxury meets nature! Indulge in top-tier accommodations, impeccable
+        services, and unmatched amenities. Your perfect escape awaits!
+      </p>
+      <h4 class="ad-subtitle">Your dream destination awaits</h4>
+    </div>
+  </section>
+  <section class="parallax" id="parallax-1"></section>
   <section id="home-about">
     <div class="container">
       <div class="about-image">
@@ -36,6 +48,7 @@
       </div>
     </div>
   </section>
+  <section class="parallax" id="parallax-2"></section>
   <section id="features">
     <div class="container">
       <h2 class="title">Rooms & Suites</h2>
@@ -50,18 +63,18 @@
           <p class="room-price">ksh. 6000 Per night</p>
         </div>
         <div class="feature-card">
-          <img src="{% static 'images/bed-1.jpg' %}" alt="Suite" />
+          <img src="{% static 'images/bed-6.jpg' %}" alt="Suite" />
           <h2 class="room-title">Bed Only</h2>
           <p class="room-price">ksh. 4500 Per night</p>
         </div>
         <div class="feature-card">
-          <img src="{% static 'images/bed-3.jpg' %}" alt="Suite" />
+          <img src="{% static 'images/img5.jpg' %}" alt="Suite" />
           <h2 class="room-title">Family</h2>
         </div>
       </div>
     </div>
   </section>
-
+  <section class="parallax" id="parallax-3"></section>
   <!-- Menu -->
   <section id="restaurant">
     <div class="container">
@@ -72,28 +85,29 @@
     </div>
   </section>
   <!-- End Menu -->
-
+  <section class="parallax" id="parallax-4"></section>
   <section id="gallery">
-    <div class="gallery-img">
-      <img src="{% static 'images/name-2.jpg' %}" alt="Image 1" />
-    </div>
-    <div class="gallery-img">
-      <img src="{% static 'images/hotel.jpg' %}" alt="Image 2" />
-    </div>
-    <div class="gallery-img">
-      <img src="{% static 'images/yard.jpg' %}" alt="Image 3" />
-    </div>
-    <div class="gallery-img">
-      <img src="{% static 'images/bed-3.jpg' %}" alt="Image 4" />
-    </div>
-    <div class="gallery-img">
-      <img src="{% static 'images/hotel-2.jpg' %}" alt="Image 5" />
-    </div>
-    <div class="gallery-img">
-      <img src="{% static 'images/meal.jpg' %}" alt="Image 6" />
-    </div>
+    <section id="home-about">
+      <div class="container">
+        <div class="about-image">
+          <img src="{% static 'images/camp-3.jpg' %}" alt="Front view" />
+        </div>
+        <div class="about-description">
+          <h2 class="title">Camp</h2>
+          <p>
+            Escape into a realm of tranquility and natural wonder at our serene
+            camping site nestled amidst breathtaking landscapes. Immerse
+            yourself in the harmonious symphony of rustling leaves and chirping
+            birds as you awaken to the gentle caress of the morning breeze. Our
+            campsite offers a sanctuary away from the hustle and bustle of city
+            life, where you can reconnect with the essence of nature and
+            rejuvenate your spirit.
+          </p>
+        </div>
+      </div>
+    </section>
   </section>
-
+  <section class="parallax" id="parallax-5"></section>
   <section id="team">
     <div class="container">
       <div class="team-cards">
@@ -123,6 +137,7 @@
       </div>
     </div>
   </section>
+  <section class="parallax" id="parallax-6"></section>
   <section id="cta">
     <div class="container">
       <h2 class="title">Providing High-quality Accommodation</h2>

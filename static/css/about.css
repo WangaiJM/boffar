@@ -20,6 +20,26 @@
 .about-description p {
   margin-bottom: 1rem;
 }
+#partners {
+  margin-bottom: 3rem;
+}
+#home-ad {
+  background-color: var(--color-green);
+  padding: 10rem 0;
+  text-align: center;
+  color: var(--color-white);
+}
+.ad-title {
+  text-transform: capitalize;
+  font-size: 3rem;
+}
+.ad-subtitle {
+  margin-top: 8rem;
+  font-size: 2.4rem;
+}
+#home-ad p {
+  margin: 2rem 0;
+}
 @media (max-width: 600px) {
   #home-about {
     padding: 5rem;

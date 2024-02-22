@@ -1,0 +1,42 @@
+#home-about {
+  padding: 20rem 0;
+  background-color: #e7e6e6;
+}
+#home-about .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+.about-image,
+.about-image img {
+  border-radius: 1rem;
+}
+.about-description .title {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+.about-description p {
+  margin-bottom: 1rem;
+}
+@media (max-width: 600px) {
+  #home-about {
+    padding: 5rem;
+  }
+  #home-about .container {
+    display: block;
+  }
+  .about-image,
+  .about-image img {
+    display: none;
+  }
+  .about-description .title {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    text-align: center;
+  }
+  .about-description p {
+    margin-bottom: 1rem;
+  }
+}

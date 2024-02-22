@@ -1,0 +1,42 @@
+.menu-table-wrapper {
+  overflow-x: auto;
+}
+#restaurant h3 {
+  margin-bottom: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: var(--color-gray-700);
+  padding: 1rem 0;
+  color: var(--color-gray-100);
+}
+.menu-table-wrapper {
+  overflow-x: auto;
+}
+
+.menu-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  box-shadow: var(--box-shadow-md);
+  background-color: var(--color-gray-300);
+}
+
+.menu-table th,
+.menu-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.menu-table th {
+  background-color: var(--color-gray-100);
+}
+
+@media (max-width: 600px) {
+  .menu-table th,
+  .menu-table td {
+    padding: 8px;
+  }
+}

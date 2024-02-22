@@ -1,0 +1,28 @@
+#restaurant {
+  padding: 10rem;
+  background-color: #ecebeb;
+}
+#restaurant .title {
+  text-align: center;
+  margin-bottom: 4rem;
+  font-weight: 900;
+  font-size: 2em;
+}
+.menu-item {
+  padding: 3rem 0 2rem 0;
+  width: 70%;
+  margin: 0 auto;
+}
+.price {
+  margin-top: 1rem;
+  color: rgb(179, 123, 50);
+}
+.menu-title {
+  font-size: 3rem;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+}
+.menu-description {
+  font-size: 1.5rem;
+  color: var(--color-text-secondary);
+}
