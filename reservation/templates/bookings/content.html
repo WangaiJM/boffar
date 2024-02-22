@@ -1,47 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <style>
       :root {
-        --primary-color: hsl(120, 100%, 25%);
-        --secondary-color: hsl(29, 100%, 50%);
+        --color-wheat: #f3d49a;
       }
-      .title-head {
-        padding: 0.5rem;
-        font-size: 2.4rem;
-        background-color: var(--secondary-color);
-        border-radius: 0.8rem;
-        margin: 2rem 0;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
-
-      label {
-        padding: 12px 12px 12px 0;
-        display: inline-block;
+      body {
+        font-size: 16px;
+        line-height: 1.6;
+        background-color: #cfd0d1;
       }
-
-      .col-25 {
-        float: left;
-        width: 20%;
-        margin-top: 6px;
+      .main-title {
+        text-align: center;
+        background-color: black;
+        color: #ffffff;
       }
-
-      .col-75 {
-        float: left;
-        width: 80%;
-        margin-top: 6px;
+      header h1 {
+        margin-bottom: 10px;
       }
-
-      /* Clear floats after the columns */
-      .row:after {
-        content: "";
-        display: table;
-        clear: both;
+      .container {
+        width: 85%;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .title {
+        text-align: center;
+        margin-bottom: 10px;
+        background-color: #4c7cac;
+        color: var(--color-wheat);
+      }
+      .info-section {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        margin-bottom: 10px;
+      }
+      .info-title {
+        text-transform: capitalize;
+      }
+      p {
+        line-height: 1.6;
       }
     </style>
   </head>
   <body>
-    <h3 class="title-head">Reservation</h3>
-    firstname: {{firstname}}, 'lastname': lastname, 'email': email, 'contact':
-    contact, 'Check In': check_in_date, 'Check Out': check_out_date
+    <header class="main-title">
+      <div class="container">
+        <h1>Boffar Cabins & Campsite</h1>
+        <h3>Reservation</h3>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <h2 class="title">Client Info</h2>
+        <div class="info-section">
+          <div class="info-title">
+            <h4>Name:</h4>
+          </div>
+          <div class="info-details">
+            <p>{{firstname}} {{lastname}}</p>
+          </div>
+        </div>
+        <div class="info-section">
+          <div class="info-title">
+            <h4>Contacts:</h4>
+          </div>
+          <div class="info-details">
+            <p>{{contact}}</p>
+          </div>
+        </div>
+        <div class="info-section">
+          <div class="info-title">
+            <h4>Email:</h4>
+          </div>
+          <div class="info-details">
+            <p>{{email}}</p>
+          </div>
+        </div>
+        <h2 class="title">Dates</h2>
+        <div class="info-section">
+          <div class="info-title">
+            <h4>Check In:</h4>
+          </div>
+          <div class="info-details">
+            <p>{{check_in}}</p>
+          </div>
+        </div>
+        <div class="info-section">
+          <div class="info-title">
+            <h4>Check Out:</h4>
+          </div>
+          <div class="info-details">
+            <p>{{check_out}}</p>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

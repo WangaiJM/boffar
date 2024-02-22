@@ -1,64 +1,120 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <style>
       :root {
-        --primary-color: hsl(120, 100%, 25%);
-        --secondary-color: hsl(29, 100%, 50%);
-      }
-      .title-head {
-        padding: 0.5rem;
-        font-size: 2.4rem;
-        background-color: var(--secondary-color);
-        border-radius: 0.8rem;
-        margin: 2rem 0;
-      }
+        /* Primary Colors */
+        --color-wheat: #f5deb3;
+        --color-white: #ffffff;
+        --color-black: #000000;
 
-      label {
-        padding: 12px 12px 12px 0;
-        display: inline-block;
+        /* Grays */
+        --color-gray-100: #f8f9fa;
+        --color-gray-200: #e9ecef;
+        --color-gray-300: #dee2e6;
+        --color-gray-400: #ced4da;
+        --color-gray-500: #adb5bd;
+        --color-gray-600: #6c757d;
+        --color-gray-700: #495057;
+        --color-gray-800: #343a40;
+        --color-gray-900: #212529;
       }
-
-      .col-25 {
-        float: left;
-        width: 20%;
-        margin-top: 6px;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
-
-      .col-75 {
-        float: left;
-        width: 80%;
-        margin-top: 6px;
+      body {
+        font-size: 16px;
+        line-height: 1.6;
+        background-color: #e9ecef;
       }
-
-      /* Clear floats after the columns */
-      .row:after {
-        content: "";
-        display: table;
-        clear: both;
+      .main-title {
+        text-align: center;
+        background-color: black;
+        color: #ffffff;
+      }
+      header h1 {
+        margin-bottom: 10px;
+      }
+      .container {
+        width: 85%;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .title {
+        text-align: center;
+        margin-bottom: 10px;
+        background-color: #adb5bd;
+        color: var(--color-wheat);
+      }
+      .info-section {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        margin-bottom: 10px;
+      }
+      .info-section:last-child {
+        display: block;
+      }
+      .message {
+        margin: 10px 0;
+      }
+      p {
+        line-height: 1.6;
       }
     </style>
   </head>
   <body>
-    <h3 class="title-head">{{subject}}</h3>
-
-    <div class="row">
-      <div class="col-25">
-        <label>Name:</label>
+    <header class="main-title">
+      <div class="container">
+        <h1>Boffar Cabins & Campsite</h1>
+        <h3>Customer Query</h3>
       </div>
-      <div class="col-75">{{firstname}} {{lastname }}</div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label>Email:</label>
+    </header>
+    <main>
+      <div class="container">
+        <h2 class="title">Client Info</h2>
+        <div class="info-section">
+          <div class="info-title">
+            <h4>Name:</h4>
+          </div>
+          <div class="info-details">
+            <p>{{firstname}} {{lastname}}</p>
+          </div>
+        </div>
+        <div class="info-section">
+          <div class="info-title">
+            <h4>Contacts:</h4>
+          </div>
+          <div class="info-details">
+            <p>{{contact}}</p>
+          </div>
+        </div>
+        <div class="info-section">
+          <div class="info-title">
+            <h4>Email:</h4>
+          </div>
+          <div class="info-details">
+            <p>{{email}}</p>
+          </div>
+        </div>
+        <h2 class="title">Query</h2>
+        <div class="info-section">
+          <div class="info-title">
+            <h4>Subject:</h4>
+          </div>
+          <div class="info-details">
+            <p><strong>{{subject}}</strong></p>
+          </div>
+        </div>
+        <div class="info-section">
+          <div class="info-title">
+            <h4>Message:</h4>
+          </div>
+          <div class="info-details">
+            <p class="message">{{body}}</p>
+          </div>
+        </div>
       </div>
-      <div class="col-75">{{email}}</div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label>Content</label>
-      </div>
-      <div class="col-75">{{body}}</div>
-    </div>
+    </main>
   </body>
 </html>

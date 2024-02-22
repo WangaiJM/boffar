@@ -38,5 +38,16 @@ document.addEventListener("DOMContentLoaded", function () {
     showSlide(currentSlide);
   }
 
-  setInterval(nextSlide, 5000); // Change slide every 5 seconds
+  setInterval(nextSlide, 3000); // Change slide every 5 seconds
+});
+
+// date picker
+
+$(function () {
+  $(".datepicker").datepicker({
+    dateFormat: "yy-mm-dd", // Adjust the date format as needed
+    changeMonth: true,
+    changeYear: true,
+    // You can add more options here as needed
+  });
 });

@@ -5,7 +5,7 @@
 {% load static %}
 
 <!-- title -->
-{% block title %} Contact Us {% endblock %}
+{% block title %} Book {% endblock %}
 
 <!-- header -->
 {% block header %} {% include 'app/headerOther.html' %} {% endblock%}
@@ -43,23 +43,11 @@
             <div class="form-group">
               <div class="form-control">
                 <label>{{ form.check_in_date.label }}</label>
-                <input
-                  type="date"
-                  class="form-control"
-                  name="check_in_date"
-                  id="check_in_date"
-                  value="{{ form.check_in_date.value }}"
-                />
+                {{form.check_in_date}}
               </div>
               <div class="form-control">
                 <label>{{ form.check_out_date.label }}</label>
-                <input
-                  type="date"
-                  class="form-control"
-                  name="check_out_date"
-                  id="check_out_date"
-                  value="{{ form.check_out_date.value }}"
-                />
+                {{form.check_out_date}}
               </div>
             </div>
 

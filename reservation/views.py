@@ -32,12 +32,12 @@ def bookingView(request):
                 'lastname': lastname,
                 'email': email,
                 'contact': contact,
-                'Check In': check_in_date,
-                'Check Out': check_out_date
+                'check_in': check_in_date,
+                'check_out': check_out_date
             })
 
             try:
-                send_mail(firstname, message, settings.EMAIL_HOST_USER,
+                send_mail(firstname + " " + lastname, message, settings.EMAIL_HOST_USER,
                           ["info@boffarcabins.com"], html_message=html)
             except BadHeaderError:
                 return HttpResponse("Invalid header found.")

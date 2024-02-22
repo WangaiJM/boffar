@@ -1,6 +1,6 @@
 .main-header {
   position: relative;
-  min-height: 90dvh;
+  min-height: 100dvh;
 }
 .other-header {
   background-color: var(--color-gray-600);
@@ -76,7 +76,7 @@
 }
 .banner {
   position: relative;
-  height: 65vh;
+  height: 85dvh;
   color: var(--color-wheat);
   text-transform: capitalize;
   font-size: 1.6em;
