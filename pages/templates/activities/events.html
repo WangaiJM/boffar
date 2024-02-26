@@ -1,0 +1,99 @@
+<!-- extending main -->
+{% extends 'app/main.html' %}
+
+<!-- load static -->
+{% load static %}
+
+<!-- title -->
+{% block title %} Fun Activities {% endblock %}
+
+<!-- header -->
+{% block header %} {% include 'app/headerOther.html' %} {% endblock%}
+<!-- Banner -->
+{% block banner %} {% include 'app/banner.html' %} {% endblock%}
+<!-- body -->
+{% block content %}
+<main>
+  <section id="home-ad">
+    <div class="container">
+      <h1 class="ad-title">ENTERTAINING, ENERGETIC, SOCIAL</h1>
+      <p>
+        Experience the great outdoors like never before at our campsite, where
+        every day brings exciting adventures, from boat riding to stargazing
+        nights around the campfire
+      </p>
+    </div>
+  </section>
+
+  <section class="parallax" id="parallax-2-games"></section>
+  <section id="features">
+    <div class="container">
+      <h2 class="title">Family Friendly</h2>
+      <h4 class="features-subtitle">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe, eius
+        earum. Odit sapiente labore obcaecati esse fuga vel nemo ex.
+      </h4>
+      <div class="feature-cards reverse">
+        <div class="feature-card">
+          <img src="{% static 'images/act-6.jpg' %}" alt="Suite" />
+        </div>
+        <div class="feature-card">
+          <img src="{% static 'images/act-7.jpg' %}" alt="Suite" />
+        </div>
+        <div class="feature-card">
+          <img src="{% static 'images/lunch-2.jpg' %}" alt="Suite" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section family -->
+
+  <section class="parallax" id="parallax-3-games"></section>
+  <section id="gallery">
+    <section id="home-about">
+      <div class="container">
+        <div class="about-image">
+          <img
+            src="{% static 'images/activities/activity-5.jpg' %}"
+            alt="Front view"
+          />
+        </div>
+        <div class="about-description">
+          <h2 class="title">Conference</h2>
+          <p>
+            Welcome to our conference venue! With modern facilities and stunning
+            surroundings, we're the ideal choice for your next event. From
+            corporate summits to academic gatherings, our spaces are designed to
+            meet your needs, ensuring a seamless and successful experience. Let
+            us help you create unforgettable moments at our professional yet
+            welcoming venue.
+          </p>
+        </div>
+      </div>
+    </section>
+  </section>
+  <!-- end section conference -->
+  <section class="parallax" id="parallax-1-games"></section>
+  <section id="home-about">
+    <div class="container">
+      <div class="about-image">
+        <img src="{% static 'images/act-6.jpg' %}" alt="Front view" />
+      </div>
+      <div class="about-description">
+        <h2 class="title">Parties</h2>
+        <p>
+          Welcome. Our venue is where memories are made and celebrations come to
+          life. With vibrant spaces, top-notch amenities, and a dedicated team
+          to bring your vision to reality, your event is sure to be a hit.
+          Whether it's a birthday bash, anniversary celebration, or any special
+          occasion, let us set the stage for an unforgettable party experience.
+          Book with us and let the good times roll!
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}
+
+<!-- footer -->
+{% block footer %} {% include 'app/footer.html' %} {% endblock%}

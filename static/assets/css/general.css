@@ -5,3 +5,41 @@
   box-shadow: var(--box-shadow);
   border-radius: 0.2em;
 }
+.parallax {
+  height: 65vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#parallax-1 {
+  background-image: url("./../images/camps-1.jpg");
+}
+#parallax-2 {
+  background-image: url("./../images/room-1.jpg");
+}
+#parallax-3 {
+  background-image: url("./../images/hotel-2.jpg");
+}
+#parallax-4 {
+  background-image: url("./../images/camps-2.jpg");
+}
+#parallax-5 {
+  background-image: url("./../images/event-1.jpg");
+}
+
+#parallax-6 {
+  background-image: url("./../images/event-2.jpg");
+}
+#parallax-1-games {
+  background-image: url("./../images/event-2.jpg");
+}
+#parallax-2-games {
+  background-image: url("./../images/event-2.jpg");
+}
+#parallax-3-games {
+  background-image: url("./../images/event-2.jpg");
+}
+#parallax-4-games {
+  background-image: url("./../images/event-2.jpg");
+}

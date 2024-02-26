@@ -13,6 +13,9 @@ def roomsView(request):
 def teamView(request):
     return render(request, 'team/index.html', { 'title': 'team'})
 
+def activitiesView(request):
+    return render(request, 'activities/events.html', {'title': 'Activities'})
+
 
 def galleryView(request):
     galleries = gallery.objects.all().order_by('-uploaded_at')
